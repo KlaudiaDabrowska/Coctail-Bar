@@ -1,3 +1,5 @@
+@use 'variables';
+
 .modal{
     position: absolute;
     left: 50%;
@@ -9,13 +11,13 @@
     align-items: center;
     padding: 30px 60px;
     text-align: center;
-    width: 1000px;
-    height: 750px;
+    width: 70%;
+    height: 80%;
     background-image: linear-gradient(#8a8282ec, #c1c1c1ed);
     border-radius: 8px;
-    box-shadow: 5px 5px 10px $shadow-color;
-    color: $bgc-color;
-    animation: show-modal .2s;
+    box-shadow: 5px 5px 10px variables.$shadow-color;
+    color: variables.$bgc-color;
+    animation: show-modal .4s;
 
     .modal__close {
         position: absolute;

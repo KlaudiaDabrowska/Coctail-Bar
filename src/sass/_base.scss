@@ -1,19 +1,12 @@
+@use 'variables';
+
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     font-family: 'Montserrat';
-    background-color: $bgc-color;
-    color: $bgc-color;
+    background-color: variables.$bgc-color;
+    color: variables.$bgc-color;
     font-variant: small-caps;
-
-    h1 {
-        letter-spacing: 4px;
-        font-size: 45px;
-    }
-
-    p{
-        font-size: 20px;
-    }
 }
