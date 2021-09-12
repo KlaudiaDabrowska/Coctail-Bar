@@ -1,9 +1,6 @@
-import '../src/sass/style.scss'
+import '../src/sass/style.scss';
+import {btnOne} from '../src/tools/ingredients';
+import {btnTwo} from '../src/tools/name';
+import {btnThree} from '../src/tools/all';
+import {btnFour} from '../src/tools/random';
 
-
-const btn1=document.querySelector(".wrap__one");
-
-btn1.addEventListener("click", () =>{
-    const modal = document.querySelector(".modal");
-    modal.style.display="block"
-})
