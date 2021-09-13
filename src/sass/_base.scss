@@ -1,12 +1,11 @@
 @use 'variables';
+@use 'mixin';
 
 body {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    @include mixin.justify;
+    @include mixin.fonts;
     height: 100vh;
-    font-family: 'Montserrat';
     background-color: variables.$bgc-color;
     color: variables.$bgc-color;
-    font-variant: small-caps;
 }

@@ -3,8 +3,6 @@ export const btnFour = document.querySelector(".wrap__four");
 const image = document.querySelector(".wrap-images__drink");
 
 btnFour.addEventListener("click", () => {
-        // const modal = document.querySelector(".modal");
-        // modal.style.display="block";
         if (image.classList.contains("wrap-images__drink--shake")) {
             image.classList.remove("wrap-images__drink--shake")
         } else {
@@ -14,7 +12,7 @@ btnFour.addEventListener("click", () => {
     setTimeout(() => {
         const modal = document.querySelector(".modal");
         modal.style.display = "block";
-    }, 1500);
+    }, 1300);
 })
 
 

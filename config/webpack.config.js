@@ -33,7 +33,10 @@ module.exports = {
                         loader: 'css-loader'
                     },
                     {
-                        loader: 'sass-loader'
+                        loader: 'sass-loader',
+                        options: {
+                            implementation: require("dart-sass"),
+                          },
                     }
                 ]
             }

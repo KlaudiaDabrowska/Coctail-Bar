@@ -1,0 +1,9 @@
+@mixin justify{
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin fonts{
+    font-family: 'Montserrat';
+    font-variant: small-caps;
+}
