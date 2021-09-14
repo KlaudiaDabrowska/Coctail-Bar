@@ -1,0 +1,35 @@
+@use 'variables';
+@use 'mixin';
+@use 'keyframes';
+
+.modal-ingredients{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 60px;
+    width: 1216px;
+    height: 753px;
+    text-align: center;
+    background-image: linear-gradient(#8a8282ec, #c1c1c1ed);
+    border-radius: 12px;
+    box-shadow: 5px 5px 10px variables.$shadow-color;
+    color: variables.$bgc-color;
+    animation: show-modal .4s;
+
+    .modal-ingredients__close {
+        position: absolute;
+        right: 15px;
+        top: 10px;
+        height: 40px;
+        width: 40px;
+        font-size: 20px;
+        border: none;
+        cursor: pointer;
+    }
+}
+
+@include keyframes.show-modal;
