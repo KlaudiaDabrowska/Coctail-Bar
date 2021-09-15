@@ -1,23 +1,30 @@
-.modal-ingredients__heading{
+.modal-ingredients__heading,
+.modal-coctail__heading,
+.modal-all-coctails__heading,
+.modal-random__heading {
     padding-bottom: 60px;
 }
 
-.modal-ingredients__input{
+.modal-ingredients__input,
+.modal-coctail__input,
+.modal-all-coctails__input {
     width: 300px;
-    height:30px;
-    background-color:transparent;
+    height: 30px;
+    background-color: transparent;
     outline: none;
-    color:white;
+    color: white;
 }
 
-.modal-ingredients__list{
+.modal-ingredients__list,
+.modal-coctail__list,
+.modal-all-coctails__list {
     padding-top: 50px;
     display: grid;
     grid-template-columns: repeat(auto-fill, 100px);
 
 }
 
-.modal-ingredients__list-element{
+.modal-ingredients__list-element {
     display: grid;
     grid-template-columns: repeat(5, 100px);
 }

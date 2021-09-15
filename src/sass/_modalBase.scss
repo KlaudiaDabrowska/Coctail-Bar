@@ -2,7 +2,10 @@
 @use 'mixin';
 @use 'keyframes';
 
-.modal-ingredients{
+.modal-ingredients,
+.modal-coctail,
+.modal-all-coctails,
+.modal-random {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -20,7 +23,10 @@
     color: variables.$bgc-color;
     animation: show-modal .4s;
 
-    .modal-ingredients__close {
+    .modal-ingredients__close,
+    .modal-coctail__close,
+    .modal-all-coctails__close,
+    .modal-random__close {
         position: absolute;
         right: 15px;
         top: 10px;
