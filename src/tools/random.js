@@ -1,29 +1,24 @@
 export const btnFour = document.querySelector(".wrap__four");
-
+const closeBtn = document.querySelector(".modal-random__close");
+const modal = document.querySelector(".modal-random");
+const input = document.querySelector(".modal-random__input");
 const image = document.querySelector(".wrap-images__drink");
 
-btnFour.addEventListener("click", () => {
-        if (image.classList.contains("wrap-images__drink--shake")) {
-            image.classList.remove("wrap-images__drink--shake")
-        } else {
-            image.classList.add("wrap-images__drink--shake")
-        }
-    
+const shakeDrinkShowModal = () =>{
+    image.classList.add("wrap-images__drink--shake");
     setTimeout(() => {
-        const modal = document.querySelector(".modal");
-        modal.style.display = "block";
-    }, 1300);
-})
-
-
-image.addEventListener("click", () => {
-    if (image.classList.contains("wrap-images__drink--shake")) {
         image.classList.remove("wrap-images__drink--shake")
-    } else {
-        image.classList.add("wrap-images__drink--shake")
-    };
+    }, 1000);
+
     setTimeout(() => {
-        const modal = document.querySelector(".modal");
-        modal.style.display = "block";
-    }, 1500);
+        modal.style.display = "flex";
+    }, 1100);
+}
+
+btnFour.addEventListener("click", shakeDrinkShowModal)
+
+image.addEventListener("click", shakeDrinkShowModal)
+
+closeBtn.addEventListener("click", () => {
+    modal.style.display = "none"
 })

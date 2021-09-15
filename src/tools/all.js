@@ -1,6 +1,8 @@
-export const btnThree=document.querySelector(".wrap__three");
+import { showCloseModal } from "./showCloseModal";
 
-btnThree.addEventListener("click", () =>{
-    const modal = document.querySelector(".modal");
-    modal.style.display="block"
-})
+export const btnThree=document.querySelector(".wrap__three");
+const closeBtn= document.querySelector(".modal-all-coctails__close");
+const modal = document.querySelector(".modal-all-coctails");
+const input= document.querySelector(".modal-all-coctails__input");
+
+showCloseModal(btnThree, closeBtn, modal, input);
