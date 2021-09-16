@@ -28,3 +28,45 @@
     display: grid;
     grid-template-columns: repeat(5, 100px);
 }
+
+
+@media (max-width:1370px) and (min-width:1239px) {}
+
+@media (max-width:1240px) and (min-width:1024px) {
+    .modal-ingredients__heading,
+    .modal-coctail__heading,
+    .modal-all-coctails__heading,
+    .modal-random__heading {
+        font-size: 28px;
+    }
+}
+
+@media (max-width:1024px) and (min-width:768px) {
+    .modal-ingredients__heading,
+    .modal-coctail__heading,
+    .modal-all-coctails__heading,
+    .modal-random__heading {
+        font-size: 26px;
+        padding-bottom: 40px;
+    }
+}
+
+@media (max-width:767px) and (min-width:400px) {
+    .modal-ingredients__heading,
+    .modal-coctail__heading,
+    .modal-all-coctails__heading,
+    .modal-random__heading {
+        font-size: 20px;
+        padding-bottom: 35px;
+    }
+}
+
+@media (max-width:399px) {
+
+    .modal-ingredients__heading,
+    .modal-coctail__heading,
+    .modal-all-coctails__heading,
+    .modal-random__heading {
+        padding-bottom: 60px;
+    }
+}
