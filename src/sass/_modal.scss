@@ -30,7 +30,9 @@
 }
 
 
-@media (max-width:1370px) and (min-width:1239px) {}
+@media (max-width:1370px) and (min-width:1239px) {
+
+}
 
 @media (max-width:1240px) and (min-width:1024px) {
     .modal-ingredients__heading,
@@ -62,11 +64,11 @@
 }
 
 @media (max-width:399px) {
-
     .modal-ingredients__heading,
     .modal-coctail__heading,
     .modal-all-coctails__heading,
     .modal-random__heading {
-        padding-bottom: 60px;
+        font-size: 20px;
+        padding-bottom: 30px;
     }
 }
