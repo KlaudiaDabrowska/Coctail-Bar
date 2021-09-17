@@ -1,6 +1,7 @@
 @use 'variables';
 @use 'mixin';
 @use 'keyframes';
+@use 'breakpoints';
 
 .modal-ingredients,
 .modal-coctail,
@@ -22,6 +23,26 @@
     box-shadow: 5px 5px 10px variables.$shadow-color;
     color: variables.$bgc-color;
     animation: show-modal .4s;
+    @include breakpoints.breakpoint(desktop){
+        width: 1110px;
+        height: 730px;
+    };
+    @include breakpoints.breakpoint(laptop){
+        width: 1010px;
+        height: 700px;
+    };
+    @include breakpoints.breakpoint(tablet){
+        width: 700px;
+        height: 700px;
+    };
+    @include breakpoints.breakpoint(mobile){
+        width: 400px;
+        height: 600px;
+    };
+    @include breakpoints.breakpoint(smallermobile){
+        width: 350px;
+        height: 400px;
+    };
 
     .modal-ingredients__close,
     .modal-coctail__close,
@@ -35,93 +56,25 @@
         font-size: 20px;
         border: none;
         cursor: pointer;
-    }
-}
-
-@include keyframes.show-modal;
-
-@media (max-width:1370px) and (min-width:1239px) {
-
-    .modal-ingredients,
-    .modal-coctail,
-    .modal-all-coctails,
-    .modal-random {
-        width: 1110px;
-        height: 730px;
-    }
-}
-
-@media (max-width:1240px) and (min-width:1024px) {
-
-    .modal-ingredients,
-    .modal-coctail,
-    .modal-all-coctails,
-    .modal-random {
-        width: 1010px;
-        height: 700px;
-    }
-}
-
-@media (max-width:1024px) and (min-width:768px) {
-
-    .modal-ingredients,
-    .modal-coctail,
-    .modal-all-coctails,
-    .modal-random {
-        width: 700px;
-        height: 700px;
-
-        .modal-ingredients__close,
-        .modal-coctail__close,
-        .modal-all-coctails__close,
-        .modal-random__close {
+        @include breakpoints.breakpoint(tablet){
             height: 28px;
             width: 28px;
             font-size: 14px;
             border-radius: 5px;
-        }
-
-    }
-}
-
-@media (max-width:767px) and (min-width:400px) {
-
-    .modal-ingredients,
-    .modal-coctail,
-    .modal-all-coctails,
-    .modal-random {
-        width: 400px;
-        height: 600px;
-
-        .modal-ingredients__close,
-        .modal-coctail__close,
-        .modal-all-coctails__close,
-        .modal-random__close {
+        };
+        @include breakpoints.breakpoint(mobile){
             height: 25px;
             width: 25px;
             font-size: 12px;
             border-radius: 5px;
-        }
-    }
-}
-
-@media (max-width:399px) {
-
-    .modal-ingredients,
-    .modal-coctail,
-    .modal-all-coctails,
-    .modal-random {
-        width: 350px;
-        height: 400px;
-
-        .modal-ingredients__close,
-        .modal-coctail__close,
-        .modal-all-coctails__close,
-        .modal-random__close {
+        };
+        @include breakpoints.breakpoint(smallermobile){
             height: 20px;
             width: 20px;
             font-size: 10px;
             border-radius: 5px;
-        }
+        };
     }
 }
+
+@include keyframes.show-modal;

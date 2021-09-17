@@ -14,29 +14,24 @@
     border: 1px solid variables.$shadow-color;
     border-radius: 15px;
     box-shadow: 15px 15px 19px 9px variables.$shadow-color;
-
     @include breakpoints.breakpoint(desktop) {
         width: 1110px;
         height: 730px;
         padding: 20px;
     };
-
     @include breakpoints.breakpoint(laptop) {
         width: 1010px;
         height: 700px;
         padding: 15px;
     };
-
     @include breakpoints.breakpoint(tablet) {
         width: 700px;
         height: 700px;
     };
-
     @include breakpoints.breakpoint(mobile) {
         width: 400px;
         height: 600px;
     };
-
      @include breakpoints.breakpoint(smallermobile) {
         width: 350px;
         height: 400px;
@@ -47,7 +42,6 @@
     &__heading {
         font-size: 45px;
         letter-spacing: 4px;
-
         @include breakpoints.breakpoint(tabletandmobile) {
             font-size: 30px;
         };
@@ -76,7 +70,6 @@
             ". b c d ."
             ". g c h ."
             "f . c . i";
-
         @include breakpoints.breakpoint(tabletandmobile) {
             font-size: 15px;
             display: grid;
@@ -93,7 +86,6 @@
 
         .wrap__one {
             grid-area: a;
-            align-self: end;
         }
 
         .wrap__two {
@@ -102,11 +94,15 @@
 
         .wrap__three {
             grid-area: e;
-            align-self: end;
         }
 
         .wrap__four {
             grid-area: i;
+        }
+
+        .wrap__one,
+        .wrap__three{
+            align-self: end;
         }
 
         .wrap__one,
