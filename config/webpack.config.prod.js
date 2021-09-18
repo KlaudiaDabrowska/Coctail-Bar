@@ -7,6 +7,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyPlugin = require('copy-webpack-plugin');
 
 
+
 module.exports = {
     mode: 'production',
     entry: {
@@ -17,8 +18,7 @@ module.exports = {
         path: path.resolve(__dirname, '../', 'dist'),
     },
     module: {
-        rules: [
-            {
+        rules: [{
                 test: /\.css$/,
                 use: [MiniCssExtractPlugin.loader, 'css-loader']
             },
@@ -34,7 +34,7 @@ module.exports = {
                         loader: 'sass-loader',
                         options: {
                             implementation: require("dart-sass"),
-                          },
+                        },
                     }
                 ]
             }

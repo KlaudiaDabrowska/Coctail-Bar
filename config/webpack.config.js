@@ -5,6 +5,7 @@ const {
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 
 
+
 module.exports = {
     mode: 'development',
     entry: {
@@ -46,6 +47,6 @@ module.exports = {
         new CleanWebpackPlugin(),
         new HTMLWebpackPlugin({
             template: "./src/templates/index.html"
-        })
+        }),
     ]
 }
