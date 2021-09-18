@@ -46,12 +46,15 @@ const getRandomCoctail = async () => {
 }
 
 const displayCoctail = (drink) => {
+
     for (let i = 1; i < 16; i++) {
         const ingredient = document.createElement("li");
         ingredients.appendChild(ingredient);
         ingredient.innerHTML = drink[`strIngredient${i}`];
         randomCoctailModalElements.push(ingredient);
     }
+    
+    heading.textContent = randomDrink.strDrink;
 
     const recipeParagraph = document.createElement("p");
     recipe.appendChild(recipeParagraph);
@@ -66,14 +69,12 @@ const displayCoctail = (drink) => {
 
 btnFour.addEventListener("click", async () => {
     const randomDrink = await getRandomCoctail();
-    heading.textContent = randomDrink.strDrink;
     const drink = await fetchDrink(randomDrink.idDrink);
     displayCoctail(drink);
 })
 
 image.addEventListener("click", async () => {
     const randomDrink = await getRandomCoctail();
-    heading.textContent = randomDrink.strDrink;
     const drink = await fetchDrink(randomDrink.idDrink);
     displayCoctail(drink);
 })
