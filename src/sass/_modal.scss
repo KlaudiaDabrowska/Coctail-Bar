@@ -37,7 +37,60 @@
 
 }
 
+
 .modal-ingredients__list-element {
     display: grid;
     grid-template-columns: repeat(5, 100px);
 }
+
+
+.modal-random__description{
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 0.5fr 1fr; 
+    gap: 30px 30px; 
+    grid-template-areas: 
+      "ingredients recipe"
+      "image image"; 
+    overflow: hidden;
+
+      .modal-random__ingredients{
+        grid-area: ingredients;
+        justify-self: center;
+        display: grid;
+        font-size: 26px;
+
+        >li{
+            justify-self: start;
+            list-style-type: square;
+            font-size: 20px;
+            font-family: Arial;
+            font-variant: none;
+        }
+      }
+
+      .modal-random__recipe{
+        grid-area: recipe;
+        font-size: 26px;
+        justify-self: center;
+        display: grid;
+
+        >p{
+            font-size: 20px;
+            font-family: Arial;
+            font-variant: none;
+            padding: 5px;
+            justify-self: start;
+
+        }
+
+        +img{
+            grid-area: image;
+            height: 80%;
+            width: 50%;
+            justify-self: center;
+            align-self: center;
+        }
+      }
+  }
+
