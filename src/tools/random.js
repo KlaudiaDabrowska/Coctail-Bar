@@ -3,8 +3,7 @@ const closeBtn = document.querySelector(".modal-random__close");
 const modal = document.querySelector(".modal-random");
 const heading = document.querySelector(".modal-random__heading");
 const description = document.querySelector(".modal-random__description");
-const ingredients = document.querySelector(".modal-random__ingredients");
-const recipe = document.querySelector(".modal-random__recipe");
+const ingredientsList = document.querySelector(".modal-random__list");
 const image = document.querySelector(".wrap-images__drink");
 const randomCocktailModalElements = [];
 
@@ -52,13 +51,15 @@ const displayCocktail = (cocktail) => {
             break;
         }
         const ingredient = document.createElement("li");
-        ingredients.appendChild(ingredient);
+        ingredient.classList.add("modal-random__list-element");
+        ingredientsList.appendChild(ingredient);
         ingredient.innerHTML = cocktail[`strIngredient${i}`];
         randomCocktailModalElements.push(ingredient);
     }
     
     const recipeParagraph = document.createElement("p");
-    recipe.appendChild(recipeParagraph);
+    recipeParagraph.classList.add("modal-random__recipe-info");
+    description.appendChild(recipeParagraph);
     recipeParagraph.innerHTML = cocktail.strInstructions;
     randomCocktailModalElements.push(recipeParagraph)
 

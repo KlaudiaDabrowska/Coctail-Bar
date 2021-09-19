@@ -1,21 +1,31 @@
 @use 'breakpoints';
+@use 'variables';
 
 .modal-ingredients__heading,
 .modal-cocktail__heading,
 .modal-all-cocktails__heading,
 .modal-random__heading {
     padding-bottom: 60px;
-    @include breakpoints.breakpoint(laptop){
+
+    @include breakpoints.breakpoint(laptop) {
         font-size: 28px;
-    };
-    @include breakpoints.breakpoint(tabletandmobile){
+    }
+
+    ;
+
+    @include breakpoints.breakpoint(tabletandmobile) {
         font-size: 24px;
         padding-bottom: 40px;
-    };
-    @include breakpoints.breakpoint(smallermobile){
+    }
+
+    ;
+
+    @include breakpoints.breakpoint(smallermobile) {
         font-size: 17px;
         padding-bottom: 35px;
-    };
+    }
+
+    ;
 }
 
 .modal-ingredients__input,
@@ -44,53 +54,58 @@
 }
 
 
-.modal-random__description{
-    display: grid; 
-    grid-template-columns: 1fr 1fr; 
-    grid-template-rows: 0.5fr 1fr; 
-    gap: 30px 30px; 
-    grid-template-areas: 
-      "ingredients recipe"
-      "image image"; 
+.modal-random__description {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "ingredients recipe"
+        "list info"
+    "image image";
     overflow: hidden;
 
-      .modal-random__ingredients{
+    .modal-random__ingredients {
         grid-area: ingredients;
+        font-size: 30px;
+        padding-bottom: 30px;
+        color: variables.$modalTxt-color;
+    }
+
+    .modal-random__list {
+        grid-area: list;
+        align-self: flex-start;
         justify-self: center;
-        display: grid;
-        font-size: 26px;
+        font-size: 20px;
+        font-family: Arial;
+        font-variant: none;
+        text-align: left;
+        list-style-type: square;
+    }
 
-        >li{
-            justify-self: start;
-            list-style-type: square;
-            font-size: 20px;
-            font-family: Arial;
-            font-variant: none;
-        }
-      }
-
-      .modal-random__recipe{
+    .modal-random__recipe {
         grid-area: recipe;
-        font-size: 26px;
+        font-size: 30px;
+        color: variables.$modalTxt-color;
+
+    }
+
+    .modal-random__recipe-info {
+        grid-area: info;
         justify-self: center;
-        display: grid;
+        font-size: 20px;
+        font-family: Arial;
+        font-variant: none;
 
-        >p{
-            font-size: 20px;
-            font-family: Arial;
-            font-variant: none;
-            padding: 5px;
-            justify-self: start;
-
+        &::first-letter {
+            text-transform: uppercase;
         }
 
-        +img{
+        +img {
             grid-area: image;
             height: 80%;
             width: 50%;
             justify-self: center;
             align-self: center;
         }
-      }
-  }
-
+    }
+}
