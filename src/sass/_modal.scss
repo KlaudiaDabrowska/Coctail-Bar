@@ -1,8 +1,8 @@
 @use 'breakpoints';
 
 .modal-ingredients__heading,
-.modal-coctail__heading,
-.modal-all-coctails__heading,
+.modal-cocktail__heading,
+.modal-all-cocktails__heading,
 .modal-random__heading {
     padding-bottom: 60px;
     @include breakpoints.breakpoint(laptop){
@@ -19,8 +19,8 @@
 }
 
 .modal-ingredients__input,
-.modal-coctail__input,
-.modal-all-coctails__input {
+.modal-cocktail__input,
+.modal-all-cocktails__input {
     width: 300px;
     height: 30px;
     background-color: transparent;
@@ -29,8 +29,8 @@
 }
 
 .modal-ingredients__list,
-.modal-coctail__list,
-.modal-all-coctails__list {
+.modal-cocktail__list,
+.modal-all-cocktails__list {
     padding-top: 50px;
     display: grid;
     grid-template-columns: repeat(auto-fill, 100px);
