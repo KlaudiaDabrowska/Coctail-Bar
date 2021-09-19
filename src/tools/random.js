@@ -6,7 +6,7 @@ const description = document.querySelector(".modal-random__description");
 const ingredients = document.querySelector(".modal-random__ingredients");
 const recipe = document.querySelector(".modal-random__recipe");
 const image = document.querySelector(".wrap-images__drink");
-const randomCoctailModalElements = [];
+const randomCocktailModalElements = [];
 
 const shakeDrinkShowModal = () => {
     image.classList.add("wrap-images__drink--shake");
@@ -24,57 +24,57 @@ btnFour.addEventListener("click", shakeDrinkShowModal)
 image.addEventListener("click", shakeDrinkShowModal)
 
 closeBtn.addEventListener("click", () => {
-    randomCoctailModalElements.forEach((item) => item.remove());
+    randomCocktailModalElements.forEach((item) => item.remove());
     modal.style.display = "none";
 })
 
-const fetchAlcoholicCoctails = () => {
+const fetchAlcoholicCocktails = () => {
     return fetch('https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic')
         .then(res => res.json())
         .then(data => data.drinks)
 }
 
-const fetchDrink = async (id) => {
+const fetchCocktail = (id) => {
     return fetch(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`)
         .then(res => res.json())
         .then(data => data.drinks[0])
 }
 
-const getRandomCoctail = async () => {
-    const alcoholicCoctails = await fetchAlcoholicCoctails();
-    return alcoholicCoctails[Math.floor(Math.random() * alcoholicCoctails.length)];
+const getRandomCocktail = async () => {
+    const alcoholicCocktails = await fetchAlcoholicCocktails();
+    return alcoholicCocktails[Math.floor(Math.random() * alcoholicCocktails.length)];
 }
 
-const displayCoctail = (drink) => {
+const displayCocktail = (cocktail) => {
 
     for (let i = 1; i < 16; i++) {
         const ingredient = document.createElement("li");
         ingredients.appendChild(ingredient);
-        ingredient.innerHTML = drink[`strIngredient${i}`];
-        randomCoctailModalElements.push(ingredient);
+        ingredient.innerHTML = cocktail[`strIngredient${i}`];
+        randomCocktailModalElements.push(ingredient);
     }
     
-    heading.textContent = randomDrink.strDrink;
-
     const recipeParagraph = document.createElement("p");
     recipe.appendChild(recipeParagraph);
-    recipeParagraph.innerHTML = drink.strInstructions;
-    randomCoctailModalElements.push(recipeParagraph)
+    recipeParagraph.innerHTML = cocktail.strInstructions;
+    randomCocktailModalElements.push(recipeParagraph)
 
     const image = document.createElement("img");
     description.appendChild(image);
-    image.setAttribute("src", `${drink.strDrinkThumb}`)
-    randomCoctailModalElements.push(image)
+    image.setAttribute("src", `${cocktail.strDrinkThumb}`)
+    randomCocktailModalElements.push(image)
 }
 
 btnFour.addEventListener("click", async () => {
-    const randomDrink = await getRandomCoctail();
-    const drink = await fetchDrink(randomDrink.idDrink);
-    displayCoctail(drink);
+    const randomCocktail = await getRandomCocktail();
+    heading.textContent = randomCocktail.strDrink;
+    const cocktail = await fetchCocktail(randomCocktail.idDrink);
+    displayCocktail(cocktail);
 })
 
 image.addEventListener("click", async () => {
-    const randomDrink = await getRandomCoctail();
-    const drink = await fetchDrink(randomDrink.idDrink);
-    displayCoctail(drink);
+    const randomCocktail = await getRandomCocktail();
+    heading.textContent = randomCocktail.strDrink;
+    const cocktail = await fetchCocktail(randomCockctail.idDrink);
+    displayCocktail(cocktail);
 })
