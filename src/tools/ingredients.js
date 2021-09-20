@@ -21,7 +21,7 @@ const fetchByIngredient = async (ingredient) => {
     try {
         const data = await response.json();
         return data.drinks || []
-    } catch(error) {
+    } catch (error) {
         console.log(response)
         return [];
     }
@@ -46,8 +46,11 @@ const displayCocktailsList = (cocktailsName) => {
 
 const onSubmit = async () => {
     const cocktailsName = await fetchByIngredient(input.value);
-    if(cocktailsName.length === 0)  {
-        console.log("not foud")
+    if (cocktailsName.length === 0) {
+        const div = document.createElement("div");
+        div.className = "modal-ingredients__list-warning";
+        modal.appendChild(div);
+        div.textContent = "There is no such ingredient!"
     }
     displayCocktailsList(cocktailsName)
 }
