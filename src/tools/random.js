@@ -51,14 +51,14 @@ const displayCocktail = (cocktail) => {
             break;
         }
         const ingredient = document.createElement("li");
-        ingredient.classList.add("modal-random__list-element");
+        ingredient.className= "modal-random__list-element";
         ingredientsList.appendChild(ingredient);
         ingredient.innerHTML = cocktail[`strIngredient${i}`];
         randomCocktailModalElements.push(ingredient);
     }
     
     const recipeParagraph = document.createElement("p");
-    recipeParagraph.classList.add("modal-random__recipe-info");
+    recipeParagraph.className = "modal-random__recipe-info";
     description.appendChild(recipeParagraph);
     recipeParagraph.innerHTML = cocktail.strInstructions;
     randomCocktailModalElements.push(recipeParagraph)
