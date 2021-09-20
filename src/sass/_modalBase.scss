@@ -1,10 +1,11 @@
 @use 'variables';
 @use 'mixin';
 @use 'keyframes';
+@use 'breakpoints';
 
 .modal-ingredients,
-.modal-coctail,
-.modal-all-coctails,
+.modal-cocktail,
+.modal-all-cocktails,
 .modal-random {
     position: absolute;
     left: 50%;
@@ -22,10 +23,30 @@
     box-shadow: 5px 5px 10px variables.$shadow-color;
     color: variables.$bgc-color;
     animation: show-modal .4s;
+    @include breakpoints.breakpoint(desktop){
+        width: 1110px;
+        height: 730px;
+    };
+    @include breakpoints.breakpoint(laptop){
+        width: 1010px;
+        height: 700px;
+    };
+    @include breakpoints.breakpoint(tablet){
+        width: 700px;
+        height: 700px;
+    };
+    @include breakpoints.breakpoint(mobile){
+        width: 400px;
+        height: 600px;
+    };
+    @include breakpoints.breakpoint(smallermobile){
+        width: 350px;
+        height: 400px;
+    };
 
     .modal-ingredients__close,
-    .modal-coctail__close,
-    .modal-all-coctails__close,
+    .modal-cocktail__close,
+    .modal-all-cocktails__close,
     .modal-random__close {
         position: absolute;
         right: 15px;
@@ -35,6 +56,24 @@
         font-size: 20px;
         border: none;
         cursor: pointer;
+        @include breakpoints.breakpoint(tablet){
+            height: 28px;
+            width: 28px;
+            font-size: 14px;
+            border-radius: 5px;
+        };
+        @include breakpoints.breakpoint(mobile){
+            height: 25px;
+            width: 25px;
+            font-size: 12px;
+            border-radius: 5px;
+        };
+        @include breakpoints.breakpoint(smallermobile){
+            height: 20px;
+            width: 20px;
+            font-size: 10px;
+            border-radius: 5px;
+        };
     }
 }
 

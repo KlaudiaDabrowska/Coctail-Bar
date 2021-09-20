@@ -1,5 +1,6 @@
 @use 'variables';
 @use 'mixin';
+@use 'breakpoints';
 
 button {
     height: 60px;
@@ -11,6 +12,28 @@ button {
     box-shadow: 12px 9px 20px -9px variables.$shadow-color;
     border-radius: 10px;
     cursor: pointer;
+    @include breakpoints.breakpoint(desktop){
+        width: 180px;
+        font-size: 16px;
+    };
+    @include breakpoints.breakpoint(laptop){
+        width: 150px;
+        font-size: 14px;
+    };
+    @include breakpoints.breakpoint(tablet){
+        width: 150px;
+        font-size: 12px;
+    };
+    @include breakpoints.breakpoint(mobile){
+        width: 140px;
+        height: 50px;
+        font-size: 10px;
+    };
+    @include breakpoints.breakpoint(smallermobile){
+        width: 120px;
+        height: 35px;
+        font-size: 9px;
+    };
 
     &:hover {
         background: linear-gradient(variables.$bgc-color 5%, rgb(136, 130, 119) 100%);
