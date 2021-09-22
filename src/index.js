@@ -11,3 +11,4 @@ import {
 import {
     btnFour
 } from '../src/tools/random';
+import { closeBtn } from './tools/oneIngredient';

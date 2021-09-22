@@ -51,7 +51,7 @@ const displayCocktail = (cocktail) => {
             break;
         }
         const ingredient = document.createElement("li");
-        ingredient.className= "modal-random__list-element";
+        // ingredient.className= "modal-random__list-element";
         ingredientsList.appendChild(ingredient);
         ingredient.innerHTML = cocktail[`strIngredient${i}`];
         randomCocktailModalElements.push(ingredient);

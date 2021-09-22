@@ -75,7 +75,7 @@ submit.addEventListener("click", () => {
 })
 
 document.addEventListener("keyup", (e) => {
-    if (e.code === 13) {
+    if (e.key === "Enter") {
         onSubmit();
         removeScrollbar();
     }

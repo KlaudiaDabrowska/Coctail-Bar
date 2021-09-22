@@ -6,7 +6,8 @@
 .modal-ingredients,
 .modal-cocktail,
 .modal-all-cocktails,
-.modal-random {
+.modal-random,
+.modal-recipe {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -62,7 +63,8 @@
     .modal-ingredients__close,
     .modal-cocktail__close,
     .modal-all-cocktails__close,
-    .modal-random__close {
+    .modal-random__close,
+    .modal-recipe__close {
         position: absolute;
         right: 15px;
         top: 10px;

@@ -4,7 +4,8 @@
 .modal-ingredients__heading,
 .modal-cocktail__heading,
 .modal-all-cocktails__heading,
-.modal-random__heading {
+.modal-random__heading,
+.modal-recipe__heading {
     padding-bottom: 60px;
 
     @include breakpoints.breakpoint(laptop) {
