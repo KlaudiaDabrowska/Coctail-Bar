@@ -23,6 +23,7 @@
     border-radius: 12px;
     box-shadow: 5px 5px 10px variables.$shadow-color;
     color: variables.$bgc-color;
+    overflow: auto;
     animation: show-modal .4s;
 
     @include breakpoints.breakpoint(desktop) {

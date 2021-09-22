@@ -32,17 +32,6 @@ const cleanModal = () => {
     div.innerHTML = "";
 }
 
-const addScrollbar = () => {
-    if (cocktailsElList.childElementCount >= 45) {
-        modal.style.overflow = "scroll";
-        modal.style.overflowX = "hidden";
-    }
-}
-
-const removeScrollbar = () => {
-    modal.style.overflow = "visible";
-}
-
 const displayCocktailsList = (cocktailsName) => {
     cocktailsName.forEach((cocktailName) => {
         const liElement = document.createElement("li");
@@ -60,29 +49,24 @@ const onSubmit = async () => {
     const cocktailsName = await fetchByIngredient(input.value);
     if (cocktailsName.length !== 0) {
         displayCocktailsList(cocktailsName);
-        addScrollbar();
     } else {
         div.className = "modal-ingredients__list-warning";
         modal.appendChild(div);
         div.textContent = "There is no such ingredient!";
-        addScrollbar();
     }
 }
 
 submit.addEventListener("click", () => {
     onSubmit();
-    removeScrollbar();
 })
 
-document.addEventListener("keyup", (e) => {
-    if (e.key === "Enter") {
+modal.addEventListener("keyup", (e) => {
+    if (e.key === "Enter"){
         onSubmit();
-        removeScrollbar();
     }
 })
 
 closeBtn.addEventListener("click", () => {
     cleanModal();
-    removeScrollbar();
     input.value = "";
 })
