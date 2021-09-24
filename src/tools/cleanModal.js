@@ -1,6 +1,6 @@
-const cleanModal = (cocktailsElList, div) => {
+const cleanModal = (cocktailsElList, warning) => {
     cocktailsElList.innerHTML = "";
-    div.innerHTML = "";
+    warning.innerHTML = "";
 }
 
 export { cleanModal }

@@ -11,11 +11,6 @@ const fetchCocktailById = (id) => {
 }
 
 const fetchByIngredient = async (ingredient) => {
-    // return fetch(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${ingredient}`)
-    // .then(res => res.data)
-    // .then(data => data.drinks || [])
-    // .catch((error) => [])
-
     const response = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${ingredient}`);
     try {
         const data = await response.json();

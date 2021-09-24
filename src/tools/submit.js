@@ -1,10 +1,10 @@
-function submitByClick (submit, onSubmit) {
-    submit.addEventListener("click", () => {
+function submitByClickListener (submitBtn, onSubmit) {
+    submitBtn.addEventListener("click", () => {
         onSubmit();
     })
 }
 
-function submitByEnter (modal, onSubmit) {
+function submitByEnterListener (modal, onSubmit) {
     modal.addEventListener("keyup", (e) => {
         if (e.key === "Enter") {
             onSubmit();
@@ -12,4 +12,4 @@ function submitByEnter (modal, onSubmit) {
     })
 }
 
-export { submitByClick, submitByEnter }
+export { submitByClickListener, submitByEnterListener }
