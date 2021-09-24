@@ -4,7 +4,7 @@ import { cleanModal } from "./cleanModal";
 import { submitByClickListener, submitByEnterListener } from "./submit";
 import { displayCocktailsList } from "./displayCocktailsList";
 
-export const btnByName=document.querySelector(".wrap__two");
+export const btnByName=document.querySelector(".wrap__cocktail");
 const closeBtn= document.querySelector(".modal-cocktail__close");
 const modal = document.querySelector(".modal-cocktail");
 const inputNameCocktail= document.querySelector(".modal-cocktail__input");

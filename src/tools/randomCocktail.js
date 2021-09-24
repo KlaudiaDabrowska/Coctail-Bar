@@ -6,7 +6,7 @@ import {
     displayCocktail
 } from "./displayCocktail";
 
-export const btnRandomCocktail = document.querySelector(".wrap__four");
+export const btnRandomCocktail = document.querySelector(".wrap__random");
 const closeBtn = document.querySelector(".modal-random__close");
 const modal = document.querySelector(".modal-random");
 const heading = document.querySelector(".modal-random__heading");

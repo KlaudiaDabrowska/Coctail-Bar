@@ -84,31 +84,31 @@
                 "e";
         };
 
-        .wrap__one {
+        .wrap__ingredients {
             grid-area: a;
         }
 
-        .wrap__two {
+        .wrap__cocktail {
             grid-area: f;
         }
 
-        .wrap__three {
+        .wrap__all-cocktails {
             grid-area: e;
         }
 
-        .wrap__four {
+        .wrap__random {
             grid-area: i;
         }
 
-        .wrap__one,
-        .wrap__three{
+        .wrap__ingredients,
+        .wrap__all-cocktails{
             align-self: end;
         }
 
-        .wrap__one,
-        .wrap__two,
-        .wrap__three,
-        .wrap__four{
+        .wrap__ingredients,
+        .wrap__cocktail,
+        .wrap__all-cocktails,
+        .wrap__random{
             @include breakpoints.breakpoint(tabletandmobile){
                 justify-self: center;
             };
