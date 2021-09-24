@@ -7,11 +7,11 @@ import {
 } from "./displayCocktail";
 
 export const btnRandomCocktail = document.querySelector(".wrap__random");
-const closeBtn = document.querySelector(".modal-random__close");
-const modal = document.querySelector(".modal-random");
-const heading = document.querySelector(".modal-random__heading");
-const description = document.querySelector(".modal-random__description");
-const ingredientsList = document.querySelector(".modal-random__list");
+const closeBtn = document.querySelector(".modal-recipe__close");
+const modal = document.querySelector(".modal-recipe");
+const heading = document.querySelector(".modal-recipe__heading");
+const description = document.querySelector(".modal-recipe__description");
+const ingredientsList = document.querySelector(".modal-recipe__list");
 const drinkImage = document.querySelector(".wrap-images__drink");
 const randomCocktailModalElements = [];
 

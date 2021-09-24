@@ -7,18 +7,21 @@
 .modal-random__heading,
 .modal-recipe__heading {
     padding-bottom: 60px;
+    font-size: 35px;
 
     @include breakpoints.breakpoint(laptop) {
-        font-size: 28px;
+        font-size: 30px;
     };
-    
-    @include breakpoints.breakpoint(tabletandmobile) {
-        font-size: 24px;
+    @include breakpoints.breakpoint(tablet) {
+        font-size: 25px;
         padding-bottom: 40px;
     };
-
+    @include breakpoints.breakpoint(mobile) {
+        font-size: 20px;
+        padding-bottom: 35px;
+    };
     @include breakpoints.breakpoint(smallermobile) {
-        font-size: 17px;
+        font-size: 15px;
         padding-bottom: 35px;
     };
 }
@@ -30,6 +33,16 @@
     grid-template-columns: 1.9fr 0.1fr;
     grid-column-gap: 10px;
     width: 50%;
+
+    @include breakpoints.breakpoint(tablet) {
+        width: 75%;
+    };
+    @include breakpoints.breakpoint(mobile) {
+        width: 100%;
+    };
+    @include breakpoints.breakpoint(smallermobile) {
+        width: 100%;
+    };
 }
 
 .modal-ingredients__input,
@@ -45,13 +58,19 @@
 .modal-cocktail__submit,
 .modal-all-cocktails__submit {
     width: 120%;
-    height: 110%;
-    align-self: center;
+    height: 105%;
     font-weight: bold;
-    background: linear-gradient(#FFFAF0 5%, #959187 100%);
-    box-shadow: 12px 9px 20px -9px variables.$shadow-color;
     border-radius: 4px;
     cursor: pointer;
+
+    @include breakpoints.breakpoint(mobile) {
+        height: 95%;
+        width: 200%;
+    };
+    @include breakpoints.breakpoint(smallermobile) {
+        height: 95%;
+        width: 200%;
+    };
 }
 
 .modal-ingredients__list,
@@ -59,15 +78,58 @@
 .modal-all-cocktails__list {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 10px 10px;
-    padding-top: 30px;
+    gap: 15px 15px;
+    padding-top: 40px;
     list-style-type: none;
-}
 
+    @include breakpoints.breakpoint(tablet) {
+        grid-template-columns: repeat(4, 1fr);
+    };
+    @include breakpoints.breakpoint(mobile) {
+        grid-template-columns: repeat(2, 1fr);
+    };
+    @include breakpoints.breakpoint(smallermobile) {
+        grid-template-columns: repeat(2, 1fr);
+    };
+}
 
 .modal-ingredients__list-warning,
 .modal-cocktail__list-warning,
-.modal-all-cocktails__list-warning{
+.modal-all-cocktails__list-warning {
     font-size: 35px;
-    color:rgb(124, 4, 4);
+    color: rgb(124, 4, 4);
+    @include breakpoints.breakpoint(tablet) {
+        font-size: 25px;
+    };
+    @include breakpoints.breakpoint(mobile) {
+        font-size: 20px;
+    };
+    @include breakpoints.breakpoint(smallermobile) {
+        font-size: 15px;
+    };
+}
+
+.modal-ingredients__list-element-button,
+.modal-cocktail__list-element-button,
+.modal-all-cocktails__list-element-button{
+    height: 50px;
+    width: 180px;
+    font-size: 15px;
+    font-variant: none;
+
+    @include breakpoints.breakpoint(laptop) {
+        width: 150px;
+    };
+    @include breakpoints.breakpoint(tablet) {
+        width: 140px;
+        font-size: 14px;
+    };
+    @include breakpoints.breakpoint(mobile) {
+        width: 130px;
+        font-size: 13px;
+    };
+    @include breakpoints.breakpoint(smallermobile) {
+        width: 120px;
+        font-size: 11px;
+    };
 }
