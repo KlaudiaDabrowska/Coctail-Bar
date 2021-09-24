@@ -15,10 +15,10 @@
         <p class="wrapper__paragraph">Find recipe for your favourite drink</p>
 
         <div class="wrap">
-            <button class="wrap__one">By ingredients</button>
-            <button class="wrap__two">By name of cocktail</button>
-            <button class="wrap__three">List of cocktails</button>
-            <button class="wrap__four">Shake drink for a random drink</button>
+            <button class="wrap__ingredients">By ingredients</button>
+            <button class="wrap__cocktail">By name of cocktail</button>
+            <button class="wrap__all-cocktails">List of cocktails</button>
+            <button class="wrap__random">Shake drink for a random drink</button>
             <img src="../../public/images/arrow1.png" alt="" class="wrap-images__arrow1">
             <img src="../../public/images/arrow2.png" alt="" class="wrap-images__arrow2">
             <img src="../../public/images/drink6.png" alt="" class="wrap-images__drink">
@@ -56,27 +56,17 @@
             </ul>
         </div>
 
-        <div class="modal-random">
-            <button class="modal-random__close"><i class="fas fa-times"></i></button>
-            <h1 class="modal-random__heading"></h1>
-            <div class="modal-random__description">
-                <h3 class="modal-random__ingredients">Ingredients: </h3>
-                <ul class="modal-random__list">
+        <div class="modal-random modal-recipe">
+            <button class="modal-random__close modal-recipe__close"><i class="fas fa-times"></i></button>
+            <h1 class="modal-random__heading modal-recipe__heading"></h1>
+            <div class="modal-random__description modal-recipe__description">
+                <h3 class="modal-random__ingredients modal-recipe__ingredients">Ingredients: </h3>
+                <ul class="modal-random__list modal-recipe__list">
                 </ul>
-                <h3 class="modal-random__recipe">Recipe: </h3>
+                <h3 class="modal-random__recipe modal-recipe__recipe">Recipe: </h3>
             </div>
         </div>
 
-        <div class="modal-recipe">
-            <button class="modal-recipe__close"><i class="fas fa-times"></i></button>
-            <h1 class="modal-recipe__heading"></h1>
-            <div class="modal-recipe__description">
-                <h3 class="modal-recipe__ingredients">Ingredients: </h3>
-                <ul class="modal-recipe__list">
-                </ul>
-                <h3 class="modal-recipe__recipe">Recipe: </h3>
-            </div>
-        </div>
     </div>
 
 </body>

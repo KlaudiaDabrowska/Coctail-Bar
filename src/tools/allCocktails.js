@@ -3,7 +3,7 @@ import { fetchAlcoholicCocktails as fetchCocktails } from "./fetchCocktails";
 import { displayCocktailsList } from "./displayCocktailsList";
 
 
-export const btnAllCocktails=document.querySelector(".wrap__three");
+export const btnAllCocktails=document.querySelector(".wrap__all-cocktails");
 const closeBtn= document.querySelector(".modal-all-cocktails__close");
 const modal = document.querySelector(".modal-all-cocktails");
 const cocktailsElList = document.querySelector(".modal-all-cocktails__list");
