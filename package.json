@@ -23,6 +23,10 @@
     "style-loader": "^3.2.1",
     "webpack": "^5.52.1",
     "webpack-cli": "^4.8.0",
-    "webpack-dev-server": "^4.2.0"
+    "webpack-dev-server": "^4.2.0",
+    "heroku": "^7.59.0"
+  },
+  "dependencies": {
+    "heroku": "^7.59.0"
   }
 }
