@@ -7,7 +7,7 @@
     "node" : ">=14.0.0" 
   },
   "scripts": {
-    "start": "webpack-dev-server --config ./config/webpack.config.js",
+    "start": "webpack-dev-server --port $PORT --host 0.0.0.0 --config ./config/webpack.config.js",
     "prod": "webpack --config ./config/webpack.config.prod.js",
     "dev": "webpack --port $PORT --host 0.0.0.0 --config ./config/webpack.config.js",
     "dev:watch": "npm run dev -- --watch",
