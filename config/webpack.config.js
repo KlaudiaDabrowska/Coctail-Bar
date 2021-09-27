@@ -14,6 +14,7 @@ module.exports = {
     output: {
         filename: 'js/[name]-index.js',
         path: path.resolve(__dirname, '../', 'dist'),
+        publicPath: '/static/'
     },
     devServer: {
         open: true,
@@ -45,8 +46,8 @@ module.exports = {
     },
     plugins: [
         new CleanWebpackPlugin(),
-        new HTMLWebpackPlugin({
-            template: "./src/templates/index.html"
-        }),
+    //     new HTMLWebpackPlugin({
+    //         template: "./src/templates/index.html"
+    //     }),
     ]
 }
