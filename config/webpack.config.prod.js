@@ -16,6 +16,7 @@ module.exports = {
     output: {
         filename: 'js/[name]-index-[contenthash:6].js',
         path: path.resolve(__dirname, '../', 'dist'),
+        publicPath: '/static/'
     },
     module: {
         rules: [{
@@ -42,9 +43,9 @@ module.exports = {
     },
     plugins: [
         new CleanWebpackPlugin(),
-        new HTMLWebpackPlugin({
-            template: "./src/templates/index.html"
-        }),
+        // new HTMLWebpackPlugin({
+        //     template: "./src/templates/index.html"
+        // }),
         new MiniCssExtractPlugin({
             filename: '[name]-[contenthash:6].css'
         }),
